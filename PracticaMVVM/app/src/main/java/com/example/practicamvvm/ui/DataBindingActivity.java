@@ -3,7 +3,6 @@ package com.example.practicamvvm.ui;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 import com.example.practicamvvm.R;
@@ -21,9 +20,6 @@ public class DataBindingActivity extends AppCompatActivity {
         activityDataBindingBinding = DataBindingUtil.setContentView(
                 this,
                 R.layout.activity_data_binding);
-
-        user = new User("Ernesto", "24");
-        activityDataBindingBinding.setUser(user);
 
         setUp();
     }

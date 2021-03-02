@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.practicamvvm.R;
-import com.example.practicamvvm.ui.ViewModelActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         btDBLABinding.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(getApplicationContext(), DBLDActivity.class));
+                startActivity(new Intent(getApplicationContext(), DataBindingLiveDataActivity.class));
             }
         });
     }

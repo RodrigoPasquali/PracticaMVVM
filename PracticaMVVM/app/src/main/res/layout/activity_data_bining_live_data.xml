@@ -5,27 +5,34 @@
 
     <data>
         <variable
-            name="user"
-            type="com.example.practicamvvm.util.User" />
+            name="viewModel"
+            type="com.example.practicamvvm.viewModel.DataBindingLiveDataViewModel" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".ui.DataBindingActivity">
+        tools:context=".ui.DataBindingLiveDataActivity">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.nombre}"/>
+            android:text="@{viewModel.user.nombre}"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.edad}"/>
+            android:text="@{viewModel.user.edad}"/>
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Actualizar Usuario"
+            android:onClick="@{()->viewModel.updateUser()}"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visibilidad"/>
     </LinearLayout>
 </layout>
