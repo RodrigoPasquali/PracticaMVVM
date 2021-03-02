@@ -7,8 +7,8 @@ public class User {
     public User(){}
 
     public User(String nombre, String edad) {
-        nombre = nombre;
-        edad = edad;
+        this.nombre = nombre;
+        this.edad = edad;
     }
 
     public String getNombre() {
