@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btLiveData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(getApplicationContext(), LiveDataActivity.class));
+                startActivity(new Intent(getApplicationContext(), LiveDataActivity.class));
             }
         });
 
