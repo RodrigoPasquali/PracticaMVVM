@@ -19,7 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{viewModel.user.nombre}"
-            app:visible="@{viewModel.visible}"/>
+            app:visibility="@{viewModel.visible}"
+            app:size="@{viewModel.textSize}"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,6 +38,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Visibilidad"
-            android:onClick="@{()->viewModel.changeVisibility()}"/>
+            android:onClick="@{()->viewModel.modifyView()}"/>
     </LinearLayout>
 </layout>

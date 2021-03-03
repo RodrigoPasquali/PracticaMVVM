@@ -9,11 +9,16 @@ import com.example.practicamvvm.util.User;
 public class DataBindingLiveDataViewModel extends ViewModel {
     private MutableLiveData<User> user;
     private MutableLiveData<Boolean> visible;
+    private MutableLiveData<Float> textSize;
 
     public DataBindingLiveDataViewModel() {
         this.user = new MutableLiveData<>();
+
         this.visible = new MutableLiveData<>();
         this.visible.setValue(true);
+
+        this.textSize = new MutableLiveData<>();
+        this.textSize.setValue(14f);
     }
 
     public LiveData<User> getUser() {
@@ -33,7 +38,7 @@ public class DataBindingLiveDataViewModel extends ViewModel {
         this.visible.setValue(visible);
     }
 
-    public MutableLiveData<Boolean> getVisible() {
+    public LiveData<Boolean> getVisible() {
         return this.visible;
     }
 
@@ -43,5 +48,18 @@ public class DataBindingLiveDataViewModel extends ViewModel {
         } else {
             this.visible.setValue(true);
         }
+    }
+
+    public void modifyView() {
+        this.changeVisibility();
+        textSize.setValue(textSize.getValue() + 5f);
+    }
+
+    public void setTextSize(float size) {
+        this.textSize.setValue(size);
+    }
+
+    public LiveData<Float> getTextSize() {
+        return this.textSize;
     }
 }
